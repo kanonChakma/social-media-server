@@ -13,6 +13,7 @@ export const createPost = async(req,res) => {
 export const getPost = async(req,res) => {
    try {
        const response= await postMessage.find();
+       console.log(response);
        res.status(200).json(response);
    } catch (error) {
      res.status().json({message: error.message});  
